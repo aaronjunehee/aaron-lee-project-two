@@ -1,0 +1,87 @@
+html {
+    font-size: 125%; // 16px * 1.25 = 20px
+}
+
+.wrapper {
+    max-width: 1200px;
+    width: 85%;
+    margin: 0 auto;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    color: $black;
+    background-color: $white;
+    line-height: 32px;
+    letter-spacing: 2px;
+}
+
+h1 {
+    font-family: 'Kumar One Outline', cursive;
+    @include font-size(64);
+    text-transform: uppercase;
+    line-height: 64px;
+}
+
+h2,
+h3,
+.logo,
+.button {
+    font-family: 'Kumar One', cursive;
+    text-transform: uppercase;
+}
+
+h2 {
+    @include font-size(33);
+    line-height: 58px;
+    letter-spacing: 2.1px;
+}
+
+.logo {
+    line-height: 24px;
+    letter-spacing: 1.2px;
+}
+
+nav {
+    font-weight: bold;
+    text-align: center;
+    line-height: 29px;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+}
+
+.button {
+    text-align: center;
+    letter-spacing: 1px;
+    background: $evergreen;
+    color: $white;
+    display: inline-block;
+    padding: 12px 20px 5.5px;
+}
+
+
+img {
+    max-width: 100%
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p, 
+ul,
+li,
+figure {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}

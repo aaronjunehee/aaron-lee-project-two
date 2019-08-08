@@ -1,0 +1,20 @@
+// VARIABLES
+
+    $yellow: rgb(248, 251, 5);
+    $evergreen: rgb(6, 86, 53);
+    $white: rgb(245, 245, 245);
+    $ice: rgb(224, 253, 223);
+    $black: rgb(21, 21, 20);
+
+
+// MIXINS
+    @mixin font-size($size-value){
+        font-size: $size-value * 1px;
+        font-size: ($size-value/20) * 1rem;
+    }
+
+    @mixin flexCenter {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
