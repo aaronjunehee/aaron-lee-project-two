@@ -3,7 +3,7 @@ html {
 }
 
 .wrapper {
-    max-width: 1200px;
+    max-width: 1300px;
     width: 85%;
     margin: 0 auto;
 }
@@ -56,12 +56,13 @@ nav {
     background: $evergreen;
     color: $white;
     display: inline-block;
-    padding: 12px 20px 5.5px;
+    padding: 11px 20px 5.5px;
 }
 
 
 img {
-    max-width: 100%
+    max-width: 100%;
+    display: block;
 }
 
 h1,

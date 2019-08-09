@@ -1,17 +1,9 @@
 
-header {
+header.index {
     background-image: url(./assets/header-home.jpg);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: right top;
-    
-    .flex-container {
-        display: flex;
-        justify-content: flex-end;
-    }
-    li {
-        padding: 40px 0 40px 50px;
-    }
 
     .line-break {
         display: block;
@@ -21,3 +13,4 @@ header {
         padding: 25px 0 40px 70px;
     }
 }
+
