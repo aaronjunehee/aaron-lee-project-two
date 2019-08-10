@@ -289,7 +289,7 @@ header.index {
 
 .about {
   padding: 70px 0 120px 0; }
-  .about .flex-container {
+  .about .about-container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -297,46 +297,25 @@ header.index {
     -ms-flex-pack: justify;
     justify-content: space-between; }
   .about .about-content {
-    width: 65%; }
-  .about .small-box {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
     -webkit-box-flex: 0;
-    -ms-flex: 0 0 auto;
-    flex: 0 0 auto;
-    position: relative;
-    margin-left: 50px; }
-  .about h2 {
-    margin-bottom: 15px; }
-  .about .button {
-    margin-top: 15px; }
-  .about .yellow-border {
-    background-color: #f8fb05;
-    height: 20px;
-    width: 90%; }
-  .about .yellow-border-right {
-    background-color: #f8fb05;
-    -ms-flex-negative: 0;
-    flex-shrink: 0;
-    width: 20px;
-    height: 90%; }
-  .about .test {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: end;
-    -ms-flex-align: end;
-    align-items: flex-end; }
+    -ms-flex: 0 0 65%;
+    flex: 0 0 65%; }
+    .about .about-content h2 {
+      margin-bottom: 15px; }
+    .about .about-content .button {
+      margin-top: 15px; }
+  .about .about-image {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 25%;
+    flex: 0 0 25%; }
+    .about .about-image img {
+      -webkit-box-shadow: -20px 20px 0 #f8fb05;
+      box-shadow: -20px 20px 0 #f8fb05; }
 
 .gallery {
   background: #e0fddf;
-  padding: 100px 0; }
-  .gallery .flex-container {
+  padding: 95px 0; }
+  .gallery .gallery-container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -348,16 +327,16 @@ header.index {
 
 .stats {
   padding: 110px 0 80px; }
-  .stats .flex-container {
+  .stats .stats-container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap; }
-  .stats .stat {
+  .stats .stat-box {
     -webkit-box-flex: 1;
-    -ms-flex: 1 0 50%;
-    flex: 1 0 50%;
+    -ms-flex: 1 1 50%;
+    flex: 1 1 50%;
     margin-bottom: 60px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -382,3 +361,74 @@ header.index {
     justify-content: center;
     position: relative;
     bottom: 7px; }
+
+.grid {
+  background: #e0fddf;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .grid .grid-container {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 50%;
+    flex: 1 1 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+  .grid .grid-left {
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+    padding-right: 140px; }
+  .grid .grid-right {
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    padding-left: 140px; }
+  .grid .image {
+    width: 100%;
+    position: relative; }
+  .grid img {
+    width: 100%; }
+  .grid .image-left {
+    bottom: 35px; }
+    .grid .image-left img {
+      -webkit-box-shadow: 20px 20px 0 #f8fb05;
+      box-shadow: 20px 20px 0 #f8fb05; }
+  .grid .image-right {
+    top: 35px; }
+    .grid .image-right img {
+      -webkit-box-shadow: -20px 20px 0 #f8fb05;
+      box-shadow: -20px 20px 0 #f8fb05; }
+  .grid .content {
+    width: 500px;
+    padding: 90px 0 60px; }
+  .grid .content-left {
+    text-align: right; }
+  .grid .content-right {
+    text-align: left; }
+  .grid .button {
+    margin-top: 30px; }
+
+.banner img {
+  width: 100%; }
+
+.search-style {
+  padding: 170px 0;
+  text-align: center; }
+  .search-style p {
+    text-align: left;
+    width: 80%;
+    min-width: 700px;
+    margin: 0 auto; }
+  .search-style .button {
+    margin-top: 25px; }
+
+footer {
+  background: #151514;
+  padding: 5px 0;
+  color: whitesmoke;
+  text-align: center; }
