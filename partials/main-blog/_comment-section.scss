@@ -1,9 +1,13 @@
 .comment-section {
     position: relative;
     bottom: 70px;
+    padding-bottom: 20px;
     .comment {
         display: flex;
         padding: 45px 0;
+    }
+    .comment:nth-of-type(2){
+        padding: 60px 0 45px;
     }
     
     .comment-content {
@@ -15,53 +19,37 @@
             margin-bottom: 10px;
         }
     }
+}
 
+// basic form styling for both comment-form and contact-form
 
     form {
         display: flex;
         flex-direction: column;
         width: 65%;
-    }
-
-    .form-top {
-        display: flex;
-        justify-content: space-between;
-       
-    }
-
-  
-
-    
-
-    input {
-        display: block;
-        width: 100%;
-        background: $ice;
-        border: none;
-        padding: 30px;
-        text-transform: uppercase;
-        margin-bottom: 40px;
-        ::placeholder {
-            color: $black;
+        input {
+            display: block;
+            width: 100%;
+            background: $ice;
+            border: none;
+            padding: 25px 40px;
             text-transform: uppercase;
-}
+            margin-bottom: 40px;
+        }
+        .form-top {
+            display: flex;
+            justify-content: space-between;
+        }
+       .form-top > input {
+            width: 47.5%;
+            border-bottom: 2.5px solid $black;
+        }
+        .form-bottom > input {
+            border: 2.5px solid $black;
+            padding-bottom: 150px;
+        }
+        button {
+            padding: 18px 0 11px;
+        }
     }
-    .form-top > input {
-        width: 47.5%;
-        border-bottom: 2.5px solid $black;
-        
-
-    }
-
-    .form-bottom > input {
-        border: 2.5px solid $black;
-        padding-bottom: 150px;
-        
-    }
-    
-
-
-
- 
-}
 

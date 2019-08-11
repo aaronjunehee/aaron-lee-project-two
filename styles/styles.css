@@ -319,6 +319,34 @@ header.blog {
     flex: 0 0 30%;
     padding: 130px 0 340px 0; }
 
+header.contact {
+  background-image: url(./assets/contact-image.jpg);
+  background-repeat: no-repeat;
+  background-size: cover; }
+  header.contact .contact-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; }
+  header.contact .logo {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 30%;
+    flex: 0 1 30%;
+    padding-top: 30px; }
+  header.contact nav {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 70%;
+    flex: 0 1 70%; }
+  header.contact h1 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 80%;
+    flex: 0 0 80%;
+    padding: 130px 0 340px 0; }
+
 .about {
   padding: 70px 0 120px 0; }
   .about .about-container {
@@ -468,8 +496,6 @@ main.blog {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
     max-width: 1800px;
     margin: 0 auto; }
 
@@ -479,13 +505,13 @@ article {
   flex: 0 1 60%;
   position: relative;
   bottom: 150px; }
-  article img {
-    width: 100%; }
   article .article-image {
     position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex; }
+    article .article-image img {
+      width: 100%; }
   article .article-image::before {
     content: '';
     display: block;
@@ -505,48 +531,56 @@ article {
     background: #f8fb05; }
   article .article-content {
     background: whitesmoke;
-    padding: 50px 70px 40px 100px;
-    border-right: 8px solid #f8fb05;
-    border-bottom: 8px solid #f8fb05; }
+    padding: 45px 50px 20px 70px;
+    border-right: 7px solid #f8fb05;
+    border-bottom: 7px solid #f8fb05; }
     article .article-content .article-wrapper {
       margin-left: auto;
-      width: 90%; }
+      width: 95%; }
     article .article-content p {
-      padding: 15px 0; }
+      padding: 18px 0; }
+    article .article-content p:first-of-type {
+      padding: 8px 0;
+      font-style: italic; }
+    article .article-content .bolded {
+      font-weight: bold; }
 
 aside {
   -webkit-box-flex: 0;
   -ms-flex: 0 1 20%;
   flex: 0 1 20%; }
   aside .sidebar-image {
-    margin-top: 100px;
+    margin-top: 120px;
     position: relative;
     z-index: 10; }
   aside .sidebar-image::before {
     content: '';
     display: block;
     width: calc(100% + 20px);
-    height: 100%;
     background: #f8fb05;
     position: absolute;
+    right: 0;
     left: -20px;
     top: 20px;
     bottom: 0;
     z-index: -10; }
   aside h3 {
-    padding: 30px 0 15px; }
+    padding: 25px 0 15px; }
   aside ul {
     list-style: disc;
     padding: 0 0 10px 30px; }
 
 .comment-section {
   position: relative;
-  bottom: 70px; }
+  bottom: 70px;
+  padding-bottom: 20px; }
   .comment-section .comment {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     padding: 45px 0; }
+  .comment-section .comment:nth-of-type(2) {
+    padding: 60px 0 45px; }
   .comment-section .comment-content {
     -webkit-box-flex: 0;
     -ms-flex: 0 1 55%;
@@ -556,48 +590,82 @@ aside {
       text-transform: uppercase;
       font-weight: bold;
       margin-bottom: 10px; }
-  .comment-section form {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    width: 65%; }
-  .comment-section .form-top {
+
+form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 65%; }
+  form input {
+    display: block;
+    width: 100%;
+    background: #e0fddf;
+    border: none;
+    padding: 25px 40px;
+    text-transform: uppercase;
+    margin-bottom: 40px; }
+  form .form-top {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between; }
-  .comment-section input {
-    display: block;
-    width: 100%;
-    background: #e0fddf;
-    border: none;
-    padding: 30px;
-    text-transform: uppercase;
-    margin-bottom: 40px; }
-    .comment-section input ::-webkit-input-placeholder {
-      color: #151514;
-      text-transform: uppercase; }
-    .comment-section input :-ms-input-placeholder {
-      color: #151514;
-      text-transform: uppercase; }
-    .comment-section input ::-ms-input-placeholder {
-      color: #151514;
-      text-transform: uppercase; }
-    .comment-section input ::placeholder {
-      color: #151514;
-      text-transform: uppercase; }
-  .comment-section .form-top > input {
+  form .form-top > input {
     width: 47.5%;
     border-bottom: 2.5px solid #151514; }
-  .comment-section .form-bottom > input {
+  form .form-bottom > input {
     border: 2.5px solid #151514;
     padding-bottom: 150px; }
+  form button {
+    padding: 18px 0 11px; }
+
+main.contact {
+  background: #e0fddf; }
+  main.contact .contact-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+  main.contact .contact-form {
+    -webkit-box-flex: 2;
+    -ms-flex: 2 1 66%;
+    flex: 2 1 66%;
+    background: whitesmoke;
+    position: relative;
+    bottom: 110px;
+    right: 50px; }
+    main.contact .contact-form form {
+      width: 100%;
+      padding: 50px;
+      -webkit-box-shadow: 20px 20px 0 #f8fb05;
+      box-shadow: 20px 20px 0 #f8fb05; }
+    main.contact .contact-form input {
+      background: whitesmoke; }
+  main.contact .info {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 100 33%;
+    flex: 1 100 33%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+    main.contact .info .info-content {
+      margin: 0 auto; }
+    main.contact .info .icons > i {
+      padding-right: 17px;
+      font-size: 25px;
+      font-size: 1.25rem; }
+    main.contact .info p:first-of-type {
+      padding: 15px 0; }
 
 footer {
   background: #151514;

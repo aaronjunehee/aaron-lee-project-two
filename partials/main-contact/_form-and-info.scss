@@ -1,0 +1,37 @@
+main.contact {
+    background: $ice;
+    .contact-container {
+        display: flex;
+    }
+    .contact-form {
+        flex: 2 1 66%;
+        background: $white;
+        position: relative;
+        bottom: 110px;
+        right: 50px;
+        form {
+            width: 100%;
+            padding: 50px;
+            box-shadow: 20px 20px 0 $yellow;
+        }
+        input {
+            background: $white;
+        }
+    }
+    .info {
+        flex: 1 100 33%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .info-content {
+            margin: 0 auto;
+        }
+        .icons > i {
+            padding-right: 17px;
+            @include font-size(25);
+        }
+        p:first-of-type {
+            padding: 15px 0;
+        }
+    }
+}
