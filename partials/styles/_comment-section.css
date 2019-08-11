@@ -1,0 +1,4 @@
+.comment-section .comment {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }

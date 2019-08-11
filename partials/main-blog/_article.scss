@@ -1,0 +1,150 @@
+// .blog-container {
+//     display: flex;
+//     article {
+//         width: 60%;
+//     }
+//     aside {
+//         width: 40%;
+//     }
+// }
+
+// article {
+//     display: flex;
+//     flex-direction: column;
+//     flex-wrap: wrap;
+//     height: 1700px;
+//     .article-image {
+//     height: 40%
+//     }
+//     .content {
+//     height: 60%;
+//     p {
+//         width: 60%;
+//     }
+//     }
+
+//     aside {
+//         align-self: flex-end;
+//     }
+
+// }
+
+// aside {
+//     width: 30%;
+// }
+
+main.blog {
+    background: $ice;
+    // position: relative;
+    // z-index: -4;
+    .blog-container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        max-width: 1800px;
+        margin: 0 auto;
+        // position: relative;
+        // z-index: -3;
+    }
+
+
+
+}
+
+
+article {
+
+    flex: 0 1 60%;
+    position: relative;
+  
+    bottom: 150px;
+    img {
+        width: 100%;
+    }
+    .article-image {
+
+        position: relative;
+        display: flex;
+
+        // align-items: flex-end;
+        
+        // box-shadow: inset -20px -20px 0 $yellow;
+    //        position: relative;
+    // text-align: center;
+    }
+//     .article-image::after {
+//     box-shadow: inset -20px -20px 0 $yellow;
+//     bottom: 0;
+//     content: "";
+//     display: block;
+//     left: 0;
+//     height: 100%;
+//     position: absolute;
+//     right: 0;
+//     top: 0;
+//     width: 100%;
+// }
+    .article-image::before {
+        content:'';
+        display: block;
+        width: 95%;
+        height: 20px;
+        background: $yellow;
+        position: absolute;
+        top: 100%;
+        right: 0;
+    }
+
+    .yellow-border::after {
+        content: '';
+        display: block;
+        width: 20px;
+        height: 94%;
+        top: 6%;
+        position: relative;
+        background: $yellow;
+    }
+    
+
+    // .article-image::after {
+    //     content:'';
+    //     display: block;
+    //     width: 20px;
+    //     height: 90%;
+    //     background: $yellow;
+    //     position: absolute;
+    //     bottom: 0;
+    //     right: 0;
+    // }
+    
+
+
+
+    .article-content {
+        background: $white;
+        padding: 50px 70px 40px 100px;
+        border-right: 8px solid $yellow;
+        border-bottom:8px solid $yellow;
+        .article-wrapper {
+            margin-left: auto;
+            width: 90%;
+        }
+
+        p {
+            padding: 15px 0;
+        }
+       
+
+    }
+
+    
+}
+    
+
+
+
+
+
+
+
+

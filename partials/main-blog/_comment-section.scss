@@ -1,0 +1,67 @@
+.comment-section {
+    position: relative;
+    bottom: 70px;
+    .comment {
+        display: flex;
+        padding: 45px 0;
+    }
+    
+    .comment-content {
+        flex: 0 1 55%;
+        padding-left: 40px;
+        p:first-of-type {
+            text-transform: uppercase;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+    }
+
+
+    form {
+        display: flex;
+        flex-direction: column;
+        width: 65%;
+    }
+
+    .form-top {
+        display: flex;
+        justify-content: space-between;
+       
+    }
+
+  
+
+    
+
+    input {
+        display: block;
+        width: 100%;
+        background: $ice;
+        border: none;
+        padding: 30px;
+        text-transform: uppercase;
+        margin-bottom: 40px;
+        ::placeholder {
+            color: $black;
+            text-transform: uppercase;
+}
+    }
+    .form-top > input {
+        width: 47.5%;
+        border-bottom: 2.5px solid $black;
+        
+
+    }
+
+    .form-bottom > input {
+        border: 2.5px solid $black;
+        padding-bottom: 150px;
+        
+    }
+    
+
+
+
+ 
+}
+

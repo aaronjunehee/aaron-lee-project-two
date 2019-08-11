@@ -8,7 +8,8 @@ html {
     margin: 0 auto;
 }
 
-body {
+body,
+input {
     font-family: 'Lato', sans-serif;
     color: $black;
     background-color: $white;
@@ -26,7 +27,8 @@ h1 {
 h2,
 h3,
 .logo,
-.button {
+.button,
+button {
     font-family: 'Kumar One', cursive;
     text-transform: uppercase;
 }
@@ -50,7 +52,8 @@ nav {
     text-transform: uppercase;
 }
 
-.button {
+.button,
+button {
     text-align: center;
     letter-spacing: 1px;
     background: $evergreen;
@@ -85,4 +88,8 @@ ul {
 a {
     text-decoration: none;
     color: inherit;
+}
+
+.line-break {
+        display: block;
 }

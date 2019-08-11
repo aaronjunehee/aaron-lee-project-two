@@ -1,13 +1,15 @@
 @import "setup";
 @import "variable-mixins";
 @import "global";
-@import "nav";
 @import "header";
-@import "main-index-about";
-@import "main-index-gallery";
-@import "main-index-stats";
-@import "main-index-grid";
-@import "main-index-banner";
-@import "main-index-search-style";
-@import "main-index-footer";
+@import "main-index/about";
+@import "main-index/gallery";
+@import "main-index/stats";
+@import "main-index/grid";
+@import "main-index/banner";
+@import "main-index/search-style";
+@import "main-blog/article";
+@import "main-blog/aside";
+@import "main-blog/comment-section";
+@import "footer";
 

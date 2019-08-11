@@ -1,0 +1,30 @@
+aside {
+    flex: 0 1 20%;
+    .sidebar-image {
+        margin-top: 100px;
+        position: relative;
+        z-index: 10;
+    }
+    .sidebar-image::before {
+        content:'';
+        display: block;
+        width: calc(100% + 20px);
+        height: 100%;
+        background: $yellow;
+        position: absolute;
+        left: -20px;
+        top: 20px;
+        bottom: 0;
+        z-index: -10;
+    }
+    h3 {
+        padding: 30px 0 15px;
+    }
+    ul {
+        list-style: disc;
+        padding: 0 0 10px 30px;
+
+    }
+
+
+}

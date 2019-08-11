@@ -1,3 +1,4 @@
+// ************* INDEX HEADER *************
 
 header.index {
     background-image: url(./assets/header-home.jpg);
@@ -5,12 +6,46 @@ header.index {
     background-size: contain;
     background-position: right top;
 
-    .line-break {
-        display: block;
-    }
-
     h1 {
         padding: 25px 0 40px 70px;
     }
+}
+
+
+nav {
+    .flex-container {
+        display: flex;
+        justify-content: flex-end;
+    }
+    li {
+        padding: 40px 0 40px 50px;
+    }
+}
+
+
+// ************* BLOG HEADER *************
+
+header.blog {
+    background-image: url(./assets/blog-image.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    .blog-container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .logo {
+        flex: 0 1 30%;
+        padding-top: 30px;
+    }
+    nav {
+        flex: 0 1 70%;
+    }
+    h1 {
+        flex: 0 0 30%;
+        padding: 130px 0 340px 0;
+    }
+    // position: relative;
+    // z-index: -5;
 }
 
