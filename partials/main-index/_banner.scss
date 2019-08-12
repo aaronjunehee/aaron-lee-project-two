@@ -1,5 +1,25 @@
 .banner {
+    background: $ice;
     img {
         width: 100%;
+    }
+    @include mq-1400 {
+        padding-top: 115px;
+    }
+    @include mq-1000 {
+        padding-top: 70px;
+    }
+    @include mq-800 {
+        .banner-image {
+            overflow: hidden; 
+        }
+        img {
+            max-width: 150%;
+            object-fit: none;
+            width: 150%;
+            height: 150%;
+            object-position: -140px 50%;
+            
+        }
     }
 }

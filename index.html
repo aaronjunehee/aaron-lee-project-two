@@ -14,8 +14,10 @@
 <body>
     <header class="index">
         <div class="wrapper">
+            <p class="hamburger"><i class="fas fa-bars"></i></p>
             <nav>
-                <ul class="flex-container">
+                <ul class="menu flex-container">
+                    <li class="exit-responsive"><i class="fas fa-times"></i></li>
                     <li><a href="">Home</a></li>
                     <li><a href="">About</a></li>
                     <li><a href="">Blog</a></li>
@@ -44,9 +46,16 @@
         
         <section class="gallery">
             <div class="wrapper gallery-container">
-                <div class="gallery-image gallery-image-1"><img src="./styles/assets/gallery-image-1.jpg" alt=""></div>
-                <div class="gallery-image gallery-image-2"><img src="./styles/assets/gallery-image-2.jpg" alt=""></div>
-                <div class="gallery-image gallery-image-3"><img src="./styles/assets/gallery-image-3.jpg" alt=""></div>
+                <div class="gallery-image gallery-image-1">
+                    <div class="yellow-line-1"><img src="./styles/assets/gallery-image-1.jpg" alt=""></div>
+                </div>
+                <div class="gallery-image gallery-image-2">
+                    <div class="yellow-line-2">
+                    <img src="./styles/assets/gallery-image-2.jpg" alt=""></div>
+                </div>
+                <div class="gallery-image gallery-image-3">
+                    <div class="yellow-line-3"><img src="./styles/assets/gallery-image-3.jpg" alt=""></div>
+                </div>
             </div>
         </section>
 
@@ -121,17 +130,33 @@
                 <a class="button" href="">Find Out More</a>
             </div>
         </section>
-
-        <footer>
-            <div class="wrapper">
-                <p>Copyright &copy; 2019 HackerYou</p>
-            </div>
-        </footer>
-
-
-
     </main>
-
     
+    <footer>
+        <div class="wrapper">
+            <p>Copyright &copy; 2019 HackerYou</p>
+        </div>
+    </footer>
+
+
+
+    <script src='https://code.jquery.com/jquery-3.4.0.min.js'
+        integrity='sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=' crossorigin='anonymous'></script>
+    <script>
+        // write a document ready
+        $(function () {
+            // write a function that listens to a click on the hamburger menu
+            $('.hamburger').click(function () {
+                // toggle class 'show' on the menu
+                $('.menu').toggleClass('show');
+            });
+            // write a function that listens to a click on the exit icon
+            // toggle class show on the menu
+            $('.exit-responsive').click(function () {
+                $('.menu').removeClass('show');
+            });
+
+        });
+    </script>
 </body>
 </html>

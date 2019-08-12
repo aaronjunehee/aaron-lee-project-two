@@ -1,18 +1,42 @@
 .grid {
     background: $ice;
     display: flex;
+    @include mq-1400 {
+        display: block;
+       
+    }
     .grid-container {
         flex: 1 1 50%;
         display: flex;
         flex-direction: column;
+        @include mq-1400 {
+            position: relative;
+        }
+
     }
     .grid-left { 
         align-items: flex-end;
         padding-right: 140px;
+        @include mq-1700 {
+            padding-right: 100px;
+        }
+        @include mq-800 {
+            padding-right: 0;
+        }
     }
     .grid-right {
         align-items: flex-start;
         padding-left: 140px;
+        @include mq-1700 {
+            padding-left: 100px;
+        }
+        @include mq-1000 {
+            display: flex;
+            flex-direction: column-reverse;
+        }
+         @include mq-800 {
+            padding-left: 0;
+        }
     }
 
     .image {
@@ -22,6 +46,9 @@
 
     img {
         width: 100%;
+        // @include mq-1500 {
+        //     width: auto;
+        // }
     }
         
     .image-left {
@@ -41,19 +68,51 @@
     .content {
         width: 500px;
         padding: 90px 0 60px;
+        @include mq-1400 {
+            position: absolute;
+            z-index: 10;
+            background: linear-gradient(rgba(224, 253, 223, 0.7), rgba(224, 253, 223, 0.7));
+            width: 850px;
+        }
+        @include mq-1000 {
+            position: static;
+            width: auto;
+        }
     }
 
     .content-left {
         text-align: right;
+        padding-bottom: 85px;
+        @include mq-1400 {
+            text-align: left;
+            left:0;
+            bottom: 10%;
+            padding: 10px 5px 10px 30px;
+        }
+        @include mq-1000 {
+            margin: 0 0 30px;
+        }
     }
 
     .content-right {
         text-align: left;
+        @include mq-1400 {
+            text-align: right;
+            right: 0;
+            bottom: -5px;
+            padding: 10px 30px 10px 5px;
+        }
+        @include mq-1000 {
+            margin-top: 70px;
+        }
     
     }
 
     .button {
         margin-top: 30px;
+        @include mq-1400 {
+            margin-top: 10px;
+        }
     }
     
 }

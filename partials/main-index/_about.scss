@@ -3,10 +3,11 @@
     .about-container {
         display: flex;
         justify-content: space-between;
+        align-items: center;
     }
 
     .about-content {
-        flex: 0 0 65%;
+        flex: 0 0 60%;
         h2 {
             margin-bottom: 15px;
         }
@@ -17,9 +18,58 @@
     }
 
     .about-image {
-        flex: 0 0 25%;
+        flex: 0 0 30%;
         img {
             box-shadow: -20px 20px 0 $yellow;
+        }
+    }
+    @include mq-1200 {
+        padding-top: 150px;
+    }
+
+    @include mq-1000 {
+        .about-content {
+            flex: 0 0 50%;
+            .button {
+                margin-top: 40px;
+            }
+        }
+        .about-image {
+            flex: 0 0 50%;
+            img {
+                margin-left: auto;
+            }
+        }
+    }
+
+    @include mq-800 {
+        padding: 50px 0 90px 0;
+        .about-container {
+            flex-direction: column-reverse;
+            align-items: flex-start;
+        }
+        .about-image {
+            
+            flex: 0 0 100%;
+            margin: 80px auto 70px;
+        }
+        .about-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            h2 {
+                text-align: center;
+                margin-bottom: 20px;
+            }
+           
+        }
+    }
+    @include mq-600 {
+        .about-image {
+            margin-top: 50px;
+        }
+        p {
+            text-align: center;
         }
     }
 }

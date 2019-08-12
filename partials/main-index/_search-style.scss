@@ -11,4 +11,18 @@
     .button {
         margin-top: 25px;
     }
+    @include mq-1000 {
+        padding: 110px 0;
+        p {
+            width: 100%;
+            min-width: auto;
+        }
+    }
+    @include mq-800 {
+        padding: 90px 0;
+        p {
+            text-align: center;
+        }
+    }
+   
 }

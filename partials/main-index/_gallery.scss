@@ -8,4 +8,94 @@
     .gallery-image {
         width: 31.8%;
     }
+    @include mq-1000 {
+        .gallery-image-3 {
+            display: none;
+        }
+        .gallery-image {
+            width: 49%;
+        }
+    }
+    @include mq-800 {
+        padding: 60px 0;
+        .gallery-image-3 {
+            display: block;
+        }
+        .gallery-container {
+            flex-direction: column;
+        }
+        .gallery-image {
+            width: 100%;
+            position: relative;
+        }
+        .gallery-image:not(.gallery-image-3){
+            margin-bottom: 50px;
+        }
+        .gallery-image-2 {
+            img {
+            margin-left: auto;
+
+            }
+        }
+
+        .yellow-line-1::before {
+            content: '';
+            display: block;
+            width: 18px;
+            height: 135%;
+            background: $yellow;
+            position: absolute;
+            top: -32%;
+            bottom: 0;
+            right: 0;
+        }
+
+        .yellow-line-1::after {
+            content: '';
+            display: block;
+            width: 80%;
+            height: 18px;
+            background: $yellow;
+            position: absolute;
+            bottom: -14px;
+            right: 0;
+        }
+
+        .yellow-line-2::before {
+            content: '';
+            display: block;
+            width: 18px;
+            height: 28%;
+            background: $yellow;
+            position: absolute;
+          
+            bottom: 0;
+            left: 0;
+        }
+
+        .yellow-line-2::after {
+            content: '';
+            display: block;
+            width: 25%;
+            height: 18px;
+            background: $yellow;
+            position: absolute;
+            bottom: -14px;
+            left: 0;
+        }
+
+        .yellow-line-3::before {
+            content: '';
+            display: block;
+            width: 18px;
+            height: 85%;
+            background: $yellow;
+            position: absolute;
+            top: 40%;
+            bottom: -28%;
+            right: 0;
+        }
+    }
+
+    
 }

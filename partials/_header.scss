@@ -9,6 +9,106 @@ header.index {
     h1 {
         padding: 25px 0 40px 70px;
     }
+
+    .hamburger,
+    .exit-responsive {
+	    display: none;
+    }
+    .hamburger {
+        padding: 30px 0 15px;
+        // text-align: right;
+    }
+
+    .show.menu {
+	    display: block;
+    }
+
+    @include mq-1700 {
+        .header-box {
+            width: 45%;
+        }
+        h1 {
+            padding-left: 120px;
+        }
+    }
+    @include mq-1600 {
+        .header-box {
+            width: 40%;
+        }
+        h1 {
+            padding-left: 150px;
+        }
+    }
+
+    @include mq-1200 {
+        height: 70vh;
+        min-height: 600px;
+        background-size: cover;
+        background-position: 30% top;
+        // height: 80vh;
+        h1 {
+            padding-left: 40px;
+        }
+       
+        .header-box {
+            width: 50%;
+        }
+    }
+
+    @include mq-1000 {
+        min-height: 600px;
+        background-position: 20% top;
+        .hamburger,
+        .exit-responsive {
+            display: block;
+            @include font-size(35);
+        }
+        h1 {
+            text-align: right;
+            padding-top: 15px;
+        }
+
+        .menu {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.99);
+            color: white;
+        }
+        .header-box {
+            width: 60%;
+        }
+    }
+
+    @include mq-800 {
+        min-height: 800px;
+        background-position: 0 top;
+        .header-box {
+            width: 100%;
+        }
+        h1 {
+             @include font-size(55);
+             padding-left: 0;
+        }
+    }
+    @include mq-600 {
+        min-height: 600px;
+        h1 {
+            @include font-size(40);
+            line-height: 55px;
+            padding: 20px 0 5px 10px;
+            margin: 20px 0 40px;
+            background: linear-gradient(rgba(245, 245, 245, 0.5) rgba(245, 245, 245, 0.5));
+            float: right;
+        }
+        .hamburger {
+            padding: 15px 0 5px;
+            text-align: right;
+        }
+    }
 }
 
 
@@ -21,6 +121,8 @@ nav {
         padding: 40px 0 40px 50px;
     }
 }
+
+
 
 
 // ************* BLOG HEADER *************

@@ -27,6 +27,7 @@ main.contact {
             margin: 0 auto;
         }
         .icons > i {
+            color: $evergreen;
             padding-right: 17px;
             @include font-size(25);
         }
