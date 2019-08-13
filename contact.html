@@ -15,15 +15,17 @@
             <div class="logo">
                 <h3>Sanctuary<span class="line-break">Helpers</h3>
             </div>
+            <p class="hamburger"><i class="fas fa-bars"></i></p>
             <nav>
-                <ul class="flex-container">
+                <ul class="menu flex-container">
+                    <li class="exit-responsive"><i class="fas fa-times"></i></li>
                     <li><a href="">Home</a></li>
                     <li><a href="">About</a></li>
                     <li><a href="">Blog</a></li>
                     <li><a href="">Contact</a></li>
                 </ul>
             </nav>
-            <h1>Get In Touch</h1>
+            <h1>Get In <span class="line-break-touch">Touch</span></h1>
         </div>
     </header>
     <main class="contact">
@@ -69,6 +71,24 @@
 
 
     </main>
-    
+
+<script src='https://code.jquery.com/jquery-3.4.0.min.js'
+    integrity='sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=' crossorigin='anonymous'></script>
+<script>
+    // write a document ready
+    $(function () {
+        // write a function that listens to a click on the hamburger menu
+        $('.hamburger').click(function () {
+            // toggle class 'show' on the menu
+            $('.menu').toggleClass('show');
+        });
+        // write a function that listens to a click on the exit icon
+        // toggle class show on the menu
+        $('.exit-responsive').click(function () {
+            $('.menu').removeClass('show');
+        });
+
+    });
+</script>
 </body>
 </html>

@@ -24,10 +24,11 @@
         }
     }
     @include mq-1200 {
-        padding-top: 150px;
+        padding-top: 140px;
     }
 
     @include mq-1000 {
+        padding-top: 90px;
         .about-content {
             flex: 0 0 50%;
             .button {
@@ -43,35 +44,47 @@
     }
 
     @include mq-800 {
-        padding: 50px 0 90px 0;
+        padding: 70px 0;
         .about-container {
-            flex-direction: column-reverse;
-            align-items: flex-start;
+            flex-direction: column;
+            justify-content: flex-start;
+            
         }
         .about-image {
-            
-            flex: 0 0 100%;
-            margin: 80px auto 70px;
+            margin: 90px 0 30px;
+            width: 60%;
+            img {
+                width: 100%;
+            }
         }
         .about-content {
             display: flex;
             flex-direction: column;
-            align-items: center;
+            align-items: flex-start;
             h2 {
-                text-align: center;
-                margin-bottom: 20px;
+                margin-bottom: 15px;
+                text-align: left;
+            }
+            .button {
+                padding: 25px 40px 20px;
             }
            
         }
     }
     @include mq-600 {
         .about-image {
-            margin-top: 50px;
+            width: 80%;
         }
-        p {
-            text-align: center;
-        }
+      
     }
+
+    @include mq-500 {
+        .about-image {
+            width: 100%;
+        }
+      
+    }
+
 }
 
 

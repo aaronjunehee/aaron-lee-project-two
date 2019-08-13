@@ -1,18 +1,24 @@
 html {
     font-size: 125%; // 16px * 1.25 = 20px
+    @include mq-1000 {
+        font-size: 120%;
+    }
+    
+    @include mq-800 {
+        font-size: 112%;
+    }
+    @include mq-600 {
+        font-size: 110%;
+    }
+    @include mq-500 {
+        font-size: 105%;
+    }
 }
 
 .wrapper {
     max-width: 1300px;
     width: 85%;
     margin: 0 auto;
-    @include mq-800 {
-        width: 90%;
-    }
-    
-    @include mq-600 {
-        width: 95%;
-    }
 }
 
 body,
@@ -22,6 +28,13 @@ input {
     background-color: $white;
     line-height: 32px;
     letter-spacing: 2px;
+    @include mq-800 {
+        line-height: 28px;   
+    }
+    @include mq-600 {
+        line-height: 25px;
+        
+    }
 }
 
 h1 {
@@ -38,12 +51,20 @@ h3,
 button {
     font-family: 'Kumar One', cursive;
     text-transform: uppercase;
+
 }
 
 h2 {
     @include font-size(33);
     line-height: 58px;
     letter-spacing: 2.1px;
+    @include mq-800 {
+        line-height: 45px;
+    }
+    @include mq-600 {
+        @include font-size(29);
+        line-height: 40px;
+    }
 }
 
 .logo {

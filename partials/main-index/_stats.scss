@@ -51,8 +51,9 @@
     }
 
     @include mq-600 {
-        p {
-            text-align: center;
+        padding: 60px 0 60px;
+        h2 {
+            text-align: left;
         }
         .fas {
             @include font-size(30);
@@ -60,6 +61,10 @@
             height: 45px;
             padding: 35px;
             margin: 0 0 20px 0;
+            
+        }
+        .stat-box {
+            align-items: flex-start;
         }
     }
 }

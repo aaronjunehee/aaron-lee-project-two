@@ -2,29 +2,71 @@ main.contact {
     background: $ice;
     .contact-container {
         display: flex;
+        justify-content: space-between;
+        @include mq-1200 {
+            flex-direction: column;
+        }
     }
     .contact-form {
-        flex: 2 1 66%;
+        flex: 0 1 866px;
+        @include mq-1200 {
+            flex: 0 1 350.75px;
+        }
+        @include mq-800 {
+            right: 0;
+            left:-10px;
+        }
+        
         background: $white;
         position: relative;
-        bottom: 110px;
+        bottom: 100px;
         right: 50px;
+        box-shadow: 20px 20px 0 $yellow;
+        @include mq-800 {
+            box-shadow: 15px 15px 0 $yellow;
+        }
         form {
             width: 100%;
             padding: 50px;
-            box-shadow: 20px 20px 0 $yellow;
+            @include mq-800 {
+                padding: 20px 10px;
+                .form-top {
+                    flex-direction: column;
+                    input {
+                        padding: 10px 0 15px 20px;
+                    }
+                }
+                
+            }
         }
         input {
             background: $white;
+            @include mq-800 {
+                width: 100%;
+                margin-bottom: 25px;
+                padding-left: 15px;
+            }
         }
     }
-    .info {
-        flex: 1 100 33%;
+    aside.info {
+        flex: 0 0 275px;
         display: flex;
         align-items: center;
         justify-content: center;
+        @include mq-1200 {
+            flex: 0 0 340px;
+            justify-content: flex-start;
+            align-items: flex-start;        
+        }
+        @include mq-800 {
+            flex: 0 0 290px;
+               
+        }
         .info-content {
             margin: 0 auto;
+            @include mq-1200 {
+                margin: 0;
+            }
         }
         .icons > i {
             color: $evergreen;

@@ -1,9 +1,80 @@
-aside {
-    flex: 0 1 20%;
+aside.blog-aside {
+    flex: 0 1 350px;
+    @include mq-1400 {
+        flex: 0 1 310px;
+    }
+    @include mq-1200 {
+        width: 90%;
+        margin: 0 auto;
+    }
+    @include mq-750 {
+        display: flex;
+        justify-content: flex-end;
+    }
+   
     .sidebar-image {
         margin-top: 120px;
         position: relative;
         z-index: 10;
+        @include mq-1200 {
+            margin-top: -80px;
+            display: flex;
+            // flex-wrap: wrap;
+            .sidebar-content {
+                padding: 19px 0 0 40px;
+                flex: 0 1 60%;
+                display: flex;
+                justify-content: space-between;
+                .content {
+                    flex: 0 1 250px;
+                    
+                }
+            }
+            .sidebar-image {
+                flex: 0 1 40%;
+                img {
+                    max-width: 100%;
+                }
+            }
+
+        }
+        @include mq-1000 {
+            .sidebar-content {
+                flex-direction: column;
+                justify-content: space-evenly;
+                .content {
+                    flex: 0 1 40%;
+                }
+            }
+            .content {
+                h3 {
+                    padding: 0;
+                }
+                ul {
+                    padding-left: 20px;
+                }
+            }
+            .image-container {
+                display: flex;
+                align-items: center;
+            }
+        }
+
+        @include mq-750 {
+            flex-direction: column;
+            max-width: 365px;
+            
+            
+            .sidebar-content {
+                flex-direction: column;
+                padding: 30px 0 20px 10px;
+                .content {
+                    width: 335px;
+                    padding-bottom: 30px;
+                }
+                
+            }
+        }
     }
     .sidebar-image::before {
         content:'';
@@ -17,9 +88,17 @@ aside {
         top: 20px;
         bottom: 0;
         z-index: -10;
+        @include mq-1200 {
+            top: 10px;
+            bottom: 10px;
+        }
+        // @include mq-750 {
+        //     left: -10px;
+        // }
     }
     h3 {
         padding: 25px 0 15px;
+       
     }
     ul {
         list-style: disc;

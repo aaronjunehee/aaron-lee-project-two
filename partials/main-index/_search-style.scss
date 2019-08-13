@@ -20,8 +20,21 @@
     }
     @include mq-800 {
         padding: 90px 0;
-        p {
-            text-align: center;
+        h2 {
+            margin: -40px 0 15px;
+        }
+        .button {
+            margin-top: 50px;
+            padding: 25px 40px 20px;
+            margin-right: auto;
+        }
+    }
+    @include mq-600 {
+        h2 {
+            text-align: left;
+        }
+        .button {
+            float: left;
         }
     }
    

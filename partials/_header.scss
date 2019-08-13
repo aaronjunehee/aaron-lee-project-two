@@ -1,15 +1,4 @@
-// ************* INDEX HEADER *************
-
-header.index {
-    background-image: url(./assets/header-home.jpg);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: right top;
-
-    h1 {
-        padding: 25px 0 40px 70px;
-    }
-
+header {
     .hamburger,
     .exit-responsive {
 	    display: none;
@@ -18,9 +7,60 @@ header.index {
         padding: 30px 0 15px;
         // text-align: right;
     }
+    nav {
+        .flex-container {
+            display: flex;
+            justify-content: flex-end;
+        }
+        li {
+            padding: 40px 0 40px 50px;
+        }
+    }  
+}
+
+header.index,
+header.blog,
+header.contact {
+    @include mq-1000 {
+        .hamburger,
+        .exit-responsive {
+            display: block;
+            @include font-size(35);
+        }
+
+        .menu {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.99);
+            color: white;
+            z-index: 100;
+        }
+    }
+}
+
+body {
+    position: relative;
+}
+
+
+// ************* INDEX HEADER *************
+
+header.index {
+    background-image: url(./assets/header-home.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right top;
 
     .show.menu {
 	    display: block;
+    }
+
+    h1 {
+        padding: 25px 0 40px 70px;
     }
 
     @include mq-1700 {
@@ -56,69 +96,95 @@ header.index {
     }
 
     @include mq-1000 {
-        min-height: 600px;
         background-position: 20% top;
-        .hamburger,
-        .exit-responsive {
-            display: block;
-            @include font-size(35);
-        }
         h1 {
             text-align: right;
-            padding-top: 15px;
+            @include font-size(55);
+            padding-top: 0;
         }
 
-        .menu {
-            display: none;
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0,0,0,0.99);
-            color: white;
-        }
+
         .header-box {
             width: 60%;
         }
     }
 
     @include mq-800 {
-        min-height: 800px;
-        background-position: 0 top;
+        background-image: none;
+        height: auto;
+        min-height: auto;
+        .wrapper {
+            width: 100%;
+        }
+        .header-container {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            background: linear-gradient(rgba(224, 253, 223,0.8) rgba(224, 253, 223, 0.8));
+            margin-bottom: 30px;
+            
+            z-index: 100;
+        }
+        h1 {
+            @include font-size(24);
+            line-height: 23px;
+            // font-family: 'Kumar One', cursive;
+            padding: 12px 0 8px 12px;
+            text-align: left;
+            // background: $ice;
+        }
+ 
+        h1::after {
+            content: 'Shop Now';
+            position: absolute;
+            right: 105px;
+            top: 15px;
+            background: $evergreen;
+            color: $white;
+            padding: 4px 20px 4px;
+            font-family: 'Lato', sans-serif;
+            @include font-size(16);
+            z-index:30;
+
+        }
+        .hamburger {
+            padding: 15px 30px 0px 25px;
+            @include font-size(30);
+            
+            // background: $yellow;
+            // text-align: right;
+        }
+        
         .header-box {
             width: 100%;
         }
-        h1 {
-             @include font-size(55);
-             padding-left: 0;
-        }
+        
     }
     @include mq-600 {
-        min-height: 600px;
+        // min-height: 600px;
+        
+        // h1 {
+        //     @include font-size(40);
+        //     line-height: 55px;
+        //     padding: 20px 0 5px 10px;
+        //     margin: 20px 0 40px;
+        //     background: linear-gradient(rgba(245, 245, 245, 0.5) rgba(245, 245, 245, 0.5));
+        //     float: right;
+        // }
+        
+    }
+
+    @include mq-500 {
         h1 {
-            @include font-size(40);
-            line-height: 55px;
-            padding: 20px 0 5px 10px;
-            margin: 20px 0 40px;
-            background: linear-gradient(rgba(245, 245, 245, 0.5) rgba(245, 245, 245, 0.5));
-            float: right;
+            @include font-size(22);
+            line-height: 19px;
+        }
+        h1::after {
+            display: none;
         }
         .hamburger {
-            padding: 15px 0 5px;
-            text-align: right;
+            @include font-size(25);
         }
-    }
-}
-
-
-nav {
-    .flex-container {
-        display: flex;
-        justify-content: flex-end;
-    }
-    li {
-        padding: 40px 0 40px 50px;
     }
 }
 
@@ -131,6 +197,9 @@ header.blog {
     background-image: url(./assets/blog-image.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    .show.menu {
+	    display: block;
+    }
     .blog-container {
         display: flex;
         justify-content: space-between;
@@ -144,8 +213,27 @@ header.blog {
         flex: 0 1 70%;
     }
     h1 {
-        flex: 0 0 30%;
+        flex: 0 0 100%;
         padding: 130px 0 340px 0;
+    }
+    @include mq-1200 {
+        background-position: 10% center;
+        h1 {
+            padding: 120px 0 300px 0;
+        }
+    }
+    @include mq-1000 {
+        background-position: 37% center;
+        h1 {
+            padding: 115px 0 200px 0;
+        }
+    }
+
+    @include mq-800 {
+      
+        h1 {
+            padding-bottom: 240px;
+        }
     }
 }
 
@@ -156,6 +244,15 @@ header.contact {
     background-image: url(./assets/contact-image.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    @include mq-1200 {
+        background-position: center center;
+    }
+    @include mq-1000 {
+        background-position: 55% center;
+    }
+    .show.menu {
+	    display: block;
+    }
     .contact-container {
         display: flex;
         justify-content: space-between;
@@ -171,5 +268,14 @@ header.contact {
     h1 {
         flex: 0 0 80%;
         padding: 130px 0 340px 0;
+        @include mq-1000 {
+            .line-break-touch {
+                display: block;
+            }
+        }
+        @include mq-800 {
+            padding: 120px 0 200px 0;
+        }
     }
+    
 }

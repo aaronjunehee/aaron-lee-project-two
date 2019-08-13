@@ -1,17 +1,19 @@
 .comment-section {
-    position: relative;
-    bottom: 70px;
-    padding-bottom: 20px;
+    margin-top: -65px;
+    padding-bottom: 110px;
     .comment {
         display: flex;
         padding: 45px 0;
+        @include mq-800 {
+            padding-bottom: 5px;
+        }
     }
     .comment:nth-of-type(2){
         padding: 60px 0 45px;
     }
     
     .comment-content {
-        flex: 0 1 55%;
+        flex: 0 1 670px;
         padding-left: 40px;
         p:first-of-type {
             text-transform: uppercase;
@@ -19,30 +21,36 @@
             margin-bottom: 10px;
         }
     }
+    @include mq-1200 {
+        margin-top: 100px;
+    }
 }
 
 // basic form styling for both comment-form and contact-form
 
     form {
+        max-width: 800px;
         display: flex;
         flex-direction: column;
-        width: 65%;
         input {
             display: block;
             width: 100%;
             background: $ice;
             border: none;
-            padding: 25px 40px;
+            padding: 25px 0 25px 40px;
             text-transform: uppercase;
             margin-bottom: 40px;
+          
         }
         .form-top {
             display: flex;
             justify-content: space-between;
+            
         }
        .form-top > input {
             width: 47.5%;
             border-bottom: 2.5px solid $evergreen;
+           
         }
         .form-bottom > input {
             border: 2.5px solid $evergreen;
@@ -50,6 +58,28 @@
         }
         button {
             padding: 18px 0 11px;
+        }
+    }
+
+    .comment-form {
+        @include mq-800 {
+            padding-top: 60px;
+        }
+        input {
+            @include mq-800 {
+                padding: 16px 25px;
+                margin-bottom: 20px;
+            }
+        }
+        .form-top {
+            @include mq-800 {
+                flex-direction: column;
+            }
+        }
+        .form-top > input {
+            @include mq-800 {
+                width: 100%;    
+            }
         }
     }
 

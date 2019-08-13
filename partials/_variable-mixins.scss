@@ -55,8 +55,21 @@
         }
     }
 
+    @mixin mq-750 {
+        @media (max-width: 750px) {
+            @content;
+        }
+    }
+
     @mixin mq-600 {
         @media (max-width: 600px) {
             @content;
         }
     }
+
+    @mixin mq-500 {
+        @media (max-width: 500px) {
+            @content;
+        }
+    }
+
