@@ -1,0 +1,38 @@
+header.contact {
+    background-image: url(./assets/contact-image.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    @include mq-1200 {
+        background-position: center center;
+    }
+    @include mq-1000 {
+        background-position: 55% center;
+    }
+    .show.menu {
+	    display: block;
+    }
+    .contact-container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .logo {
+        flex: 0 1 30%;
+        padding-top: 30px;
+    }
+    nav {
+        flex: 0 1 70%;
+    }
+    h1 {
+        flex: 0 0 80%;
+        padding: 130px 0 340px 0;
+        @include mq-1000 {
+            .line-break-touch {
+                display: block;
+            }
+        }
+        @include mq-800 {
+            padding: 120px 0 200px 0;
+        }
+    } 
+}

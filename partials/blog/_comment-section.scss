@@ -11,7 +11,6 @@
     .comment:nth-of-type(2){
         padding: 60px 0 45px;
     }
-    
     .comment-content {
         flex: 0 1 670px;
         padding-left: 40px;
@@ -26,8 +25,8 @@
     }
 }
 
-// basic form styling for both comment-form and contact-form
 
+// basic form styling for both comment-form and contact-form
     form {
         max-width: 800px;
         display: flex;
@@ -40,17 +39,18 @@
             padding: 25px 0 25px 40px;
             text-transform: uppercase;
             margin-bottom: 40px;
-          
+            &:focus {
+                border: 1px solid $black;
+                background: $white;
+            }
         }
         .form-top {
             display: flex;
             justify-content: space-between;
-            
         }
        .form-top > input {
             width: 47.5%;
             border-bottom: 2.5px solid $evergreen;
-           
         }
         .form-bottom > input {
             border: 2.5px solid $evergreen;
@@ -61,6 +61,7 @@
         }
     }
 
+// styling for specifically comment (ie. blog) form
     .comment-form {
         @include mq-800 {
             padding-top: 60px;

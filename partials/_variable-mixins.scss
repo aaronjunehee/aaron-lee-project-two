@@ -13,12 +13,6 @@
         font-size: ($size-value/20) * 1rem;
     }
 
-    @mixin flexCenter {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
     @mixin mq-1700 {
         @media (max-width: 1700px) {
             @content;

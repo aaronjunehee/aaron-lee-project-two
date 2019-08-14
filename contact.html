@@ -7,28 +7,33 @@
     <link href="https://fonts.googleapis.com/css?family=Kumar+One|Kumar+One+Outline|Lato:400,700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/d71e047b5b.js"></script>
     <link rel="stylesheet" href="./styles/styles.css">
-    <title>Document</title>
+    <title>aaron-lee-project-2-contact</title>
 </head>
 <body>
     <header class="contact">
+        <a href="#main-content" class="skip-link">Skip to main content.</a>
         <div class="wrapper contact-container">
             <div class="logo">
                 <h3>Sanctuary<span class="line-break">Helpers</h3>
             </div>
-            <p class="hamburger"><i class="fas fa-bars"></i></p>
+            <p class="hamburger">
+                <i class="fas fa-bars" aria-hidden="true"></i>
+                <span class="sr-only">Main Menu</span>
+            </p>
+            <a class="shop-now" href="">Shop Now</a>
             <nav>
-                <ul class="menu flex-container">
+                <ul class="menu menu-container">
                     <li class="exit-responsive"><i class="fas fa-times"></i></li>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">About</a></li>
-                    <li><a href="">Blog</a></li>
-                    <li><a href="">Contact</a></li>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./index.html#about">About</a></li>
+                    <li><a href="./blog.html">Blog</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
                 </ul>
             </nav>
             <h1>Get In <span class="line-break-touch">Touch</span></h1>
         </div>
     </header>
-    <main class="contact">
+    <main class="contact" id="main-content">
         <div class="wrapper contact-container">
             <section class="contact-form">
                 <form action="">
@@ -49,10 +54,18 @@
             <aside class="info">
                 <div class="info-content">
                     <div class="icons">
-                        <i class="fab fa-facebook-f"></i>
-                        <i class="fab fa-instagram"></i>
-                        <i class="fab fa-twitter"></i>
-                        <i class="far fa-comment"></i>
+                        <a href="https://www.facebook.com/" aria-label="Go to Sanctuary Helper's Facebook page">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.instagram.com/" aria-label="Go to Sanctuary Helper's Instagram page">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://twitter.com/" aria-label="Go to Sanctuary Helper's Twitter page">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="./contact.html" aria-label="Go to Sanctuary Helper's contact page">
+                            <i class="far fa-comment"></i>
+                        </a>  
                     </div>
                     <p>info@email.com</p>
                     <p>123 - 456 - 7890</p>
@@ -63,32 +76,26 @@
                 </div>
             </aside>
         </div>
-        <footer>
-            <div class="wrapper"></div>
-            <p>Copyright &copy; 2019 HackerYou</p>
-            </div>
-        </footer>
-
-
     </main>
 
-<script src='https://code.jquery.com/jquery-3.4.0.min.js'
-    integrity='sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=' crossorigin='anonymous'></script>
-<script>
-    // write a document ready
-    $(function () {
-        // write a function that listens to a click on the hamburger menu
-        $('.hamburger').click(function () {
-            // toggle class 'show' on the menu
-            $('.menu').toggleClass('show');
-        });
-        // write a function that listens to a click on the exit icon
-        // toggle class show on the menu
-        $('.exit-responsive').click(function () {
-            $('.menu').removeClass('show');
-        });
+    <footer>
+        <div class="wrapper"></div>
+        <p>Copyright &copy; 2019 HackerYou</p>
+        </div>
+    </footer>
 
-    });
-</script>
+    <script src='https://code.jquery.com/jquery-3.4.0.min.js'
+        integrity='sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=' crossorigin='anonymous'></script>
+    <script>
+        $(function () {
+            $('.hamburger').click(function () {
+                $('.menu').toggleClass('show');
+            });
+            $('.exit-responsive').click(function () {
+                $('.menu').removeClass('show');
+            });
+        });
+    </script>
+
 </body>
 </html>

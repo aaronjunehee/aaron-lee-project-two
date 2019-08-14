@@ -7,6 +7,9 @@
     }
     .gallery-image {
         width: 31.8%;
+        img {
+            background-color: $evergreen;
+        }
     }
     @include mq-1000 {
         .gallery-image-3 {
@@ -28,16 +31,14 @@
             width: 100%;
             position: relative;
         }
-        .gallery-image:not(.gallery-image-3){
+        .gallery-image:not(.gallery-image-3) {
             margin-bottom: 50px;
         }
         .gallery-image-2 {
             img {
-            margin-left: auto;
-
+                margin-left: auto;
             }
         }
-
         .yellow-line-1::before {
             content: '';
             display: block;
@@ -49,7 +50,6 @@
             bottom: 0;
             right: 0;
         }
-
         .yellow-line-1::after {
             content: '';
             display: block;
@@ -60,7 +60,6 @@
             bottom: -14px;
             right: 0;
         }
-
         .yellow-line-2::before {
             content: '';
             display: block;
@@ -68,11 +67,9 @@
             height: 28%;
             background: $yellow;
             position: absolute;
-          
             bottom: 0;
             left: 0;
         }
-
         .yellow-line-2::after {
             content: '';
             display: block;
@@ -83,7 +80,6 @@
             bottom: -14px;
             left: 0;
         }
-
         .yellow-line-3::before {
             content: '';
             display: block;
@@ -96,6 +92,4 @@
             right: 0;
         }
     }
-
-    
 }

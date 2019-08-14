@@ -1,0 +1,39 @@
+.search-style {
+    padding: 170px 0;
+    text-align: center;
+    @include mq-1000 {
+        padding: 110px 0;
+    }
+    @include mq-800 {
+        padding: 90px 0;
+    }
+    p {
+        text-align: left;
+        width: 80%;
+        min-width: 700px;
+        margin: 0 auto;
+        @include mq-1000 {
+            width: 100%;
+            min-width: auto;
+        }
+    }
+    .button {
+        margin-top: 25px;
+        @include mq-800 {
+            margin-top: 50px;
+            padding: 25px 40px 20px;
+            margin-right: auto;
+        }
+        @include mq-600 {
+            float: left;
+        }
+    }
+    h2 {
+        @include mq-800 {
+            margin: -40px 0 15px;
+        }
+        @include mq-600 {
+            text-align: left;
+        }
+    }
+}

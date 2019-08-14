@@ -1,17 +1,16 @@
 html {
     font-size: 125%; // 16px * 1.25 = 20px
     @include mq-1000 {
-        font-size: 120%;
+        font-size: 120%; // 19.2px
     }
-    
     @include mq-800 {
-        font-size: 112%;
+        font-size: 112%; // 17.92px
     }
     @include mq-600 {
-        font-size: 110%;
+        font-size: 110%; // 17.6px
     }
     @include mq-500 {
-        font-size: 105%;
+        font-size: 105%; // 16.8px
     }
 }
 
@@ -51,7 +50,6 @@ h3,
 button {
     font-family: 'Kumar One', cursive;
     text-transform: uppercase;
-
 }
 
 h2 {
@@ -88,8 +86,19 @@ button {
     color: $white;
     display: inline-block;
     padding: 11px 20px 5.5px;
+    transition: opacity 0.3s;
+    position: relative;
+    &:hover,
+    &:focus {
+        opacity: 0.8;
+    }
+    &:focus {
+        outline: 3px dotted $black; 
+    }
+    &:active {
+        top: 2.2px;
+    }
 }
-
 
 img {
     max-width: 100%;
@@ -119,5 +128,23 @@ a {
 }
 
 .line-break {
-        display: block;
+    display: block;
+}
+
+.skip-link {
+    position: absolute;
+    left: -1000px;
+    top: 5px;
+    z-index: 999;
+    background: white;
+    color: black;
+    @include font-size(25);
+    padding: 8px 18px 8px 25px;
+}
+
+.skip-link:focus {
+    left: 37%;
+    background: $black;
+    color: $white;  
+    outline: 3px dotted $black;
 }

@@ -1,0 +1,39 @@
+header.blog {
+    background-image: url(./assets/blog-image.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    @include mq-1200 {
+        background-position: 10% center;
+    }
+    @include mq-1000 {
+        background-position: 37% center;
+    }
+    .show.menu {
+	    display: block;
+    }
+    .blog-container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .logo {
+        flex: 0 1 30%;
+        padding-top: 30px;
+    }
+    nav {
+        flex: 0 1 70%;
+    }
+    h1 {
+        flex: 0 0 100%;
+        padding: 130px 0 340px 0;
+        @include mq-1200 {
+            padding: 120px 0 300px 0;
+        }
+        @include mq-1000 {
+            padding: 115px 0 200px 0;
+        }
+        @include mq-800 {
+            padding-bottom: 240px;
+        }
+    }
+}

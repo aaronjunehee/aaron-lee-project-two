@@ -1,0 +1,102 @@
+header {
+    .hamburger,
+    .exit-responsive {
+        display: none;
+        @include mq-1000 {
+            display: block;
+            @include font-size(35);
+        }
+    }
+    .hamburger {
+        padding: 30px 0 15px;
+        transition: color .5s, opacity 1s;
+        &:hover {
+            color: $evergreen;
+            opacity: 0.8;
+        }
+    }
+    .shop-now {
+        @include font-size(16);
+        position: absolute;
+        right: 110px;
+        top: 15px;
+        background: $evergreen;
+        color: $white;
+        padding: 2px 20px;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-family: 'Lato', sans-serif;
+        transition: opacity .4s;
+        &:hover {
+            opacity: 0.8;
+        }
+        z-index: 30;
+        display: none;
+        @include mq-800 {
+            display: inline;
+        }
+        @include mq-500 {
+            display: none;
+        }
+    }
+    .blog-container .shop-now,
+    .contact-container .shop-now {
+        top: 30px;
+        right: 22%;
+    }
+}
+
+nav {
+    .menu-container {
+        display: flex;
+        justify-content: flex-end;
+        @include mq-1000 {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.99);
+            color: white;
+            z-index: 100;
+            align-items: flex-start;
+            li:not(:first-child) {
+                display: flex;
+                justify-content: flex-start;
+                @include font-size(40);
+                padding-bottom: 20px;
+            }
+            li:first-child {
+                display: flex;
+                justify-content: flex-end;
+                padding-right: 40px;
+            }
+        } 
+    }
+    li {
+        margin: 40px 0 40px 50px;
+        border-bottom: 4px solid transparent;
+        transition: border 0.4s;
+        a {
+            position: relative;
+        }
+        a:hover,
+        a:focus {
+            color: lighten($black, 15%);
+        }
+        a:focus {
+            outline: 2px dotted $evergreen;
+        }
+        a:active {
+            top: 1.5px;
+        }
+        &:hover {
+            border-color: $yellow;
+        }
+    }
+    li:first-of-type {
+        border-color: transparent;
+    }
+}
+

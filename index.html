@@ -7,83 +7,85 @@
     <link href="https://fonts.googleapis.com/css?family=Kumar+One|Kumar+One+Outline|Lato:400,700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/d71e047b5b.js"></script>
     <link rel="stylesheet" href="./styles/styles.css">
-    <title>aaron-lee-project-two</title>
-
-
+    <title>aaron-lee-project-2-index</title>
 </head>
+
 <body>
     <header class="index">
+        <a href="#main-content" class="skip-link">Skip to main content.</a>
         <div class="wrapper header-container">
-            <p class="hamburger"><i class="fas fa-bars"></i></p>
+            <p class="hamburger">
+                <i class="fas fa-bars" aria-hidden="true"></i>
+                <span class="sr-only">Main Menu</span>
+            </p>
+            <a class="shop-now" href="">Shop Now</a>
             <nav>
-                <ul class="menu flex-container">
+                <ul class="menu menu-container">
                     <li class="exit-responsive"><i class="fas fa-times"></i></li>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">About</a></li>
-                    <li><a href="">Blog</a></li>
-                    <li><a href="">Contact</a></li>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="./blog.html">Blog</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
                 </ul>
             </nav>
             <h1>Sanctuary <span class="line-break">Helpers</span></h1>
         </div>
-            <div class="header-box">
-                <img src="./styles/assets/header-box.png" alt="">
-            </div>
+        <div class="header-box">
+            <img src="./styles/assets/header-box.png" alt="">
+        </div>
     </header>
-    <main>
-        <section class="about">
+    <main id="main-content">
+        <section class="about" id="about">
             <div class="wrapper about-container">
                 <div class="about-content">
                 	<h2>Discovering New Materials</h2>
                 	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim nisi iste, laborum asperiores facilis laudantium tempora suscipit. Obcaecati velit, id provident expedita quis nulla iure omnis voluptas iste error quas eius voluptatum vitae autem dignissimos animi distinctio? Odio ipsum provident facere ducimus accusantium harum, officiis placeat, maxime error alias at illum commodi ab adipisci nihil facilis! Sunt est maxime iste.</p>
-                	<a class="button" href="">Find Out More</a>
+                	<a class="button" href="./blog.html">Find Out More</a>
                 </div>
                 <div class="about-image">
-                    <img src="./styles/assets/small-box.jpg" alt="">
+                    <img src="./styles/assets/small-box.jpg" alt="a beautiful photo of a lavender couch sitting against a cement wall in a stylishly decorated living room">
                 </div>
             </div>
         </section>
-        
         <section class="gallery">
             <div class="wrapper gallery-container">
                 <div class="gallery-image gallery-image-1">
-                    <div class="yellow-line-1"><img src="./styles/assets/gallery-image-1.jpg" alt=""></div>
+                    <div class="yellow-line-1"><img src="./styles/assets/gallery-image-1.jpg" alt="a photo of a blueish green dresser sitting against a white brick wall with picture frames and a vase holding a plant sitting on top of it"></div>
                 </div>
                 <div class="gallery-image gallery-image-2">
                     <div class="yellow-line-2">
-                    <img src="./styles/assets/gallery-image-2.jpg" alt=""></div>
+                    <img src="./styles/assets/gallery-image-2.jpg" alt="a faded orange couch with poka-doted pillows placed on the seat, all different colors, with a coffee table in front with magazines left on top"></div>
                 </div>
                 <div class="gallery-image gallery-image-3">
-                    <div class="yellow-line-3"><img src="./styles/assets/gallery-image-3.jpg" alt=""></div>
+                    <div class="yellow-line-3"><img src="./styles/assets/gallery-image-3.jpg" alt="a black chair made out of a big hoop with string pulled towards the center creating the seat of it"></div>
                 </div>
             </div>
         </section>
-
         <section class="stats">
             <div class="wrapper stats-container">
                 <div class="stat-box">
-                    <i class="fas fa-home"></i>
+                    <i class="fas fa-home" aria-hidden="true"></i>
                     <div class="stat-content">
                         <h2>Customized Offers</h2>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur perferendis culpa excepturi sint ex blanditiis ducimus nihil ad iste tempora, facilis adipisci dicta voluptate mollitia.</p>
                     </div>
                 </div>
                 <div class="stat-box">
-                    <i class="fas fa-users"></i>
+                    <i class="fas fa-users" aria-hidden="true"></i>
                     <div class="stat-content">
                         <h2>Community</h2>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis rem consectetur suscipit perspiciatis praesentium ipsam non consequatur exercitationem veniam, fuga sunt nobis assumenda veritatis sed.</p>
                     </div>
                 </div>
                 <div class="stat-box">
-                    <i class="fas fa-file"></i>
+                    <i class="fas fa-file" aria-hidden="true"></i>
                     <div class="stat-content">
                         <h2>Blog</h2>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit inventore vitae repellendus laborum quasi minus ullam perferendis doloribus, debitis veniam vel soluta neque omnis culpa.</p>
                     </div>
                 </div>
                 <div class="stat-box">
-                    <i class="fas fa-phone"></i>
+                    <i class="fas fa-phone" aria-hidden="true"></i>
                     <div class="stat-content">
                         <h2>Get In Touch</h2>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, nisi! Ab eum voluptate tempore magni ut cum sit non molestias laboriosam, debitis consequuntur accusantium totam!</p>
@@ -91,35 +93,31 @@
                 </div>
             </div>
         </section>
-
         <section class="grid">
             <div class="grid-container grid-left">
                 <div class="image image-left">
-                    <img src="./styles/assets/left-image.jpg" alt="">
+                    <img src="./styles/assets/left-image.jpg" alt="a very structured, art-deco style chair that is white with wooden legs and accompanied by a beautiful wooden surface table with a bonsai tree on top">
                 </div>
                 <div class="content content-left">  
                     <h2>New Locations</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam atque dicta deleniti doloremque optio aliquam aut,
-                        expedita quasi debitis praesentium.</p>
-                    <a class="button" href="">Read More</a>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam atque dicta deleniti doloremque optio aliquam aut, expedita quasi debitis praesentium.</p>
+                    <a class="button" href="./blog.html">Read More</a>
                 </div>
             </div>
             <div class="grid-container grid-right">
                <div class="content content-right">
                     <h2>Group Programs</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam atque dicta deleniti doloremque optio aliquam aut,
-                        expedita quasi debitis praesentium.</p>
-                    <a class="button" href="">Read More</a>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam atque dicta deleniti doloremque optio aliquam aut, expedita quasi debitis praesentium.</p>
+                    <a class="button" href="./blog.html">Read More</a>
                 </div>
                 <div class="image image-right">
-                    <img src="./styles/assets/right-image.jpg" alt="">
+                    <img src="./styles/assets/right-image.jpg" alt="Wooden pool side furniture with blue accented pillows, a side table holding a flower, and white walls and blue wooden doors/window railings that surround the pool.">
                 </div>
             </div>
         </section>
-
         <section class="banner">
             <div class="banner-image">
-                <img src="./styles/assets/banner-image.jpg" alt="">
+                <img src="./styles/assets/banner-image.jpg" alt="A living room layout with a large couch in the middle and two single couches on both sides, as well as a glass coffee table in the middle with a vase of flowers as decor. Plants and lamps sit in the back.">
             </div>
         </section>
 
@@ -131,7 +129,6 @@
             </div>
         </section>
     </main>
-    
     <footer>
         <div class="wrapper">
             <p>Copyright &copy; 2019 HackerYou</p>
@@ -143,19 +140,13 @@
     <script src='https://code.jquery.com/jquery-3.4.0.min.js'
         integrity='sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=' crossorigin='anonymous'></script>
     <script>
-        // write a document ready
         $(function () {
-            // write a function that listens to a click on the hamburger menu
-            $('.hamburger').click(function () {
-                // toggle class 'show' on the menu
+            $('.hamburger').click(function () { 
                 $('.menu').toggleClass('show');
             });
-            // write a function that listens to a click on the exit icon
-            // toggle class show on the menu
             $('.exit-responsive').click(function () {
                 $('.menu').removeClass('show');
             });
-
         });
     </script>
 </body>

@@ -1,14 +1,29 @@
 .stats {
     padding: 110px 0 80px;
+    @include mq-1000 {
+        padding: 80px 0 80px;
+    }
+    @include mq-600 {
+        padding: 60px 0 60px;
+    }
     .stats-container {
         display: flex;
         flex-wrap: wrap;
-
     }
     .stat-box {
         flex: 1 1 50%;
         margin-bottom: 60px;
         display: flex;
+        @include mq-1000{
+            flex: 1 1 100%;
+            text-align: center;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 70px;
+        }
+        @include mq-600 {
+            align-items: flex-start;
+        }
     }
     .fas {
         @include font-size(32);
@@ -23,48 +38,29 @@
         justify-content: center;
         position: relative;
         bottom: 7px;
-    }
-    @include mq-1000 {
-        
-        padding: 80px 0 80px;
-       
-        .stat-box {
-            flex: 1 1 100%;
-            text-align: center;
-            flex-direction: column;
-            align-items: center;
-            margin-bottom: 70px;
-
-        }
-
-        p {
-            text-align: left;
-        }
-
-        .fas {
+        @include mq-1000 {
             @include font-size(34);
             width: 50px;
             height: 50px;
             padding: 40px;
             margin: 0 0 20px 0;
         }
-    }
-
-    @include mq-600 {
-        padding: 60px 0 60px;
-        h2 {
-            text-align: left;
-        }
-        .fas {
+        @include mq-600 {
             @include font-size(30);
             width: 45px;
             height: 45px;
             padding: 35px;
             margin: 0 0 20px 0;
-            
         }
-        .stat-box {
-            align-items: flex-start;
+    }
+    p {
+        @include mq-1000 {
+            text-align: left;
+        }
+    }
+    h2 {
+        @include mq-600 {
+            text-align: left;
         }
     }
 }

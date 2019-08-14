@@ -10,37 +10,43 @@ main.contact {
     .contact-form {
         flex: 0 1 866px;
         @include mq-1200 {
-            flex: 0 1 350.75px;
+            flex: 0 1 370px;
         }
         @include mq-800 {
             right: 0;
             left:-10px;
         }
-        
+        @include mq-600 {
+            box-shadow: 10px 10px 0 $yellow;
+        }
+        @include mq-500 {
+            width: 470px;
+            max-width: 118%;
+            left: -30px;
+        }
         background: $white;
         position: relative;
         bottom: 100px;
         right: 50px;
-        box-shadow: 20px 20px 0 $yellow;
-        @include mq-800 {
-            box-shadow: 15px 15px 0 $yellow;
-        }
+        box-shadow: 20px 20px 0 $yellow; 
         form {
             width: 100%;
             padding: 50px;
             @include mq-800 {
-                padding: 20px 10px;
+                padding: 20px 20px;
                 .form-top {
                     flex-direction: column;
                     input {
                         padding: 10px 0 15px 20px;
                     }
                 }
-                
             }
         }
         input {
             background: $white;
+            &:focus {
+                background: rgba(187, 187, 187, 0.1);
+            }
             @include mq-800 {
                 width: 100%;
                 margin-bottom: 25px;
@@ -68,7 +74,7 @@ main.contact {
                 margin: 0;
             }
         }
-        .icons > i {
+        .icons > a {
             color: $evergreen;
             padding-right: 17px;
             @include font-size(25);

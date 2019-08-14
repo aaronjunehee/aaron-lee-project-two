@@ -1,0 +1,95 @@
+header.index {
+    background-image: url(./assets/header-home.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right top;
+    @include mq-1200 {
+        height: 80vw;
+        background-size: cover;
+        background-position: 30% top;
+    }
+    @include mq-1000 {
+        background-position: 20% top;
+    }
+    @include mq-800 {
+        background-image: none;
+        height: auto;
+        min-height: auto;
+    }
+    .show.menu {
+	    display: block;
+    }
+    h1 {
+        padding: 25px 0 40px 70px;
+        @include mq-1700 {
+            padding-left: 120px;
+        }
+        @include mq-1600 {
+            padding-left: 150px;
+        }
+        @include mq-1200 {
+            padding-left: 40px;
+        }
+        @include mq-1000 {
+            text-align: right;
+            @include font-size(55);
+            padding-top: 0;
+        }
+        @include mq-800 {
+            @include font-size(22);
+            line-height: 20px;
+            padding: 11px 12px 8px 12px;
+            text-align: left;
+        }
+        @include mq-500 {
+            @include font-size(22);
+            line-height: 19px;
+            &::after {
+                display: none;
+            }
+        }
+    }
+    .header-box {
+        @include mq-1700 {
+            width: 45%;
+        }
+        @include mq-1600 {
+            width: 40%;   
+        }
+        @include mq-1200 {
+            width: 50%;
+        }
+        @include mq-1000 {
+            width: 60%;
+        }
+        @include mq-800 {
+            width: 100%;
+        }
+    }
+    .wrapper {
+        @include mq-800 {
+            width: 100%;
+        }
+    }
+    .header-container {
+        @include mq-800 {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            background: linear-gradient(rgba(224, 253, 223,0.8) rgba(224, 253, 223, 0.8));
+            margin-bottom: 0px;
+            z-index: 100;
+        }
+    }
+    .hamburger {
+        padding: 20px 30px 0px 0px;
+        text-shadow: 0 0 8px $white;
+        @include font-size(42);
+        @include mq-800 {
+            padding: 14px 30px 0px 25px;
+            @include font-size(32);
+            text-shadow: none;
+        }
+    }
+}
+
