@@ -18,8 +18,8 @@ header {
     .shop-now {
         @include font-size(16);
         position: absolute;
-        right: 110px;
-        top: 15px;
+        right: 150px;
+        top: 11px;
         background: $evergreen;
         color: $white;
         padding: 2px 20px;
@@ -32,8 +32,12 @@ header {
         }
         z-index: 30;
         display: none;
-        @include mq-800 {
+        @include mq-1000 {
             display: inline;
+        }
+        @include mq-800 {
+            right: 110px;
+            top:15px;
         }
         @include mq-500 {
             display: none;
@@ -75,25 +79,36 @@ nav {
         } 
     }
     li {
-        margin: 40px 0 40px 50px;
+        margin: 40px 0 60px 50px;
         border-bottom: 4px solid transparent;
         transition: border 0.4s;
-        a {
-            position: relative;
-        }
-        a:hover,
-        a:focus {
-            color: lighten($black, 15%);
-        }
-        a:focus {
-            outline: 2px dotted $evergreen;
-        }
-        a:active {
-            top: 1.5px;
-        }
         &:hover {
             border-color: $yellow;
         }
+        a {
+            position: relative;
+            &:hover,
+            &focus {
+                color: lighten($black, 15%);
+            }
+            &:focus {
+                outline: 2px dotted $evergreen;
+            }
+            &:active {
+                top: 1.5px;
+            }
+        }
+        // a:hover,
+        // a:focus {
+        //     color: lighten($black, 15%);
+        // }
+        // a:focus {
+        //     outline: 2px dotted $evergreen;
+        // }
+        // a:active {
+        //     top: 1.5px;
+        // }
+        
     }
     li:first-of-type {
         border-color: transparent;

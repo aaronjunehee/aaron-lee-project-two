@@ -1,6 +1,9 @@
 .comment-section {
     margin-top: -65px;
     padding-bottom: 110px;
+    @include mq-1200 {
+        margin-top: 100px;
+    }
     .comment {
         display: flex;
         padding: 45px 0;
@@ -11,17 +14,20 @@
     .comment:nth-of-type(2){
         padding: 60px 0 45px;
     }
+    .comment-image {
+        flex: 0 0 92px;
+    }
     .comment-content {
         flex: 0 1 670px;
         padding-left: 40px;
+        @include mq-600 {
+            padding-left: 25px;
+        }
         p:first-of-type {
             text-transform: uppercase;
             font-weight: bold;
             margin-bottom: 10px;
         }
-    }
-    @include mq-1200 {
-        margin-top: 100px;
     }
 }
 

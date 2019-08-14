@@ -1,10 +1,10 @@
 .about {
-    padding: 70px 0 120px 0;
+    padding: 0 0 120px 0;
     @include mq-1200 {
         padding-top: 140px;
     }
     @include mq-1000 {
-        padding-top: 90px;
+        padding-top: 80px;
     }
     @include mq-800 {
         padding: 55px 0 90px;

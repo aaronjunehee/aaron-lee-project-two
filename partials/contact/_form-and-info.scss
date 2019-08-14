@@ -9,26 +9,22 @@ main.contact {
     }
     .contact-form {
         flex: 0 1 866px;
-        @include mq-1200 {
-            flex: 0 1 370px;
-        }
-        @include mq-800 {
-            right: 0;
-            left:-10px;
-        }
-        @include mq-600 {
-            box-shadow: 10px 10px 0 $yellow;
-        }
-        @include mq-500 {
-            width: 470px;
-            max-width: 118%;
-            left: -30px;
-        }
         background: $white;
         position: relative;
         bottom: 100px;
         right: 50px;
         box-shadow: 20px 20px 0 $yellow; 
+        @include mq-1200 {
+            flex: 0 1 370px;
+            right: 0;
+        }
+        @include mq-600 {
+            box-shadow: 15px 15px 0 $yellow;
+        }
+        @include mq-500 {
+            flex: 1 0 auto;
+            max-width: 118%;
+        }
         form {
             width: 100%;
             padding: 50px;
@@ -61,12 +57,13 @@ main.contact {
         justify-content: center;
         @include mq-1200 {
             flex: 0 0 340px;
-            justify-content: flex-start;
-            align-items: flex-start;        
+            justify-content: flex-end;
+            align-items: flex-start;  
+            text-align: right;      
         }
         @include mq-800 {
-            flex: 0 0 290px;
-               
+            flex: 0 0 290px; 
+            padding-bottom: 20px;              
         }
         .info-content {
             margin: 0 auto;
@@ -78,6 +75,10 @@ main.contact {
             color: $evergreen;
             padding-right: 17px;
             @include font-size(25);
+            transition: opacity 0.6s;
+            &:hover {
+                opacity: 0.4;
+            }
         }
         p:first-of-type {
             padding: 15px 0;
