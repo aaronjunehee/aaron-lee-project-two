@@ -474,6 +474,9 @@ audio {
     font-size: .8rem;
     padding-left: 10px; }
 
+.play-button-container.disappear-on-play {
+  display: none; }
+
 header.index {
   background-image: url(./assets/header-home.jpg);
   background-repeat: no-repeat;
