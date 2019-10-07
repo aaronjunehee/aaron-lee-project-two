@@ -7,12 +7,18 @@
     <link href="https://fonts.googleapis.com/css?family=Kumar+One|Kumar+One+Outline|Lato:400,700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/d71e047b5b.js"></script>
     <link rel="stylesheet" href="./styles/styles.css">
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="icon" href="./styles/assets/favicon.ico" type="image/x-icon">
     <title>aaron-lee-project-2-index</title>
 </head>
 
 <body>
+    <audio id='audio' class='audio'>
+        <source src="./styles/assets/19559.mp3" type="audio/mpeg">
+    </audio>
+    <div class="play-button-container">
+        <button class="play-button"><i class="fas fa-play"></i></button>
+        <p>Listen To Story</p>
+    </div>
     <header class="index">
         <a href="#main-content" class="skip-link">Skip to main content.</a>
         <div class="wrapper header-container">
@@ -141,15 +147,7 @@
 
     <script src='https://code.jquery.com/jquery-3.4.0.min.js'
         integrity='sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=' crossorigin='anonymous'></script>
-    <script>
-        $(function () {
-            $('.hamburger').click(function () { 
-                $('.menu').toggleClass('show');
-            });
-            $('.exit-responsive').click(function () {
-                $('.menu').removeClass('show');
-            });
-        });
-    </script>
+    <script src="./script.js"></script>
+
 </body>
 </html>

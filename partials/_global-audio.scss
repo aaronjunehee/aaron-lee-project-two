@@ -1,0 +1,46 @@
+.play-button-container,
+.audio {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 100;
+}
+
+.audio {
+    width: 350px;
+    // mobile size media query
+    @include mq-600 {
+        width: 250px;
+    }
+}
+
+.play-button-container {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.75);
+    border-radius: 10px;
+    .play-button {
+        background: rgb(236, 236, 236);
+        border-radius: 50%;
+        border: none;
+        height: 60px;
+        width: 60px;
+        padding: 2px 0 0 5px;
+        i {
+            color: #151514;
+        }
+    }
+    p {
+        text-transform: uppercase;
+        font-size: .8rem;
+        padding-left: 10px;
+    }
+}
+
+// class toggle when play button is pressed
+.play-button-container.disappear-on-play {
+    display: none;
+}
+
+
