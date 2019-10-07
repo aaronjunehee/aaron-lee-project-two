@@ -445,6 +445,35 @@ nav li {
 nav li:first-of-type {
   border-color: transparent; }
 
+.play-button-container,
+audio {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 100; }
+
+.play-button-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 10px; }
+  .play-button-container .play-button {
+    background: #ececec;
+    border-radius: 50%;
+    border: none;
+    height: 60px;
+    width: 60px;
+    padding: 2px 0 0 5px; }
+    .play-button-container .play-button i {
+      color: #151514; }
+  .play-button-container p {
+    text-transform: uppercase;
+    font-size: .8rem;
+    padding-left: 10px; }
+
 header.index {
   background-image: url(./assets/header-home.jpg);
   background-repeat: no-repeat;
